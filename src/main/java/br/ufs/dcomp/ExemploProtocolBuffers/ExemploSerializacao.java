@@ -2,16 +2,10 @@ package br.ufs.dcomp.ExemploProtocolBuffers;
 
 import java.io.*;
 import com.google.protobuf.util.JsonFormat;
-/**
- * Hello world!
- *
- */
-public class ExemploSerializacao 
-{
-    public static void main( String[] args ) throws Exception
-    {
 
-
+/* Hello world! */
+public class ExemploSerializacao {
+    public static void main(String[] args) throws Exception {
         // Agrupando dados do primeiro telefone
         ContatoProto.Telefone.Builder bFone1 = ContatoProto.Telefone.newBuilder();
         bFone1.setNumero("79 99999-0000");
@@ -51,6 +45,5 @@ public class ExemploSerializacao
         fos.close();
 
         System.out.println("Contato escrito em formato texto/json no arquivo \"aluno.json\"");
-        
     }
 }

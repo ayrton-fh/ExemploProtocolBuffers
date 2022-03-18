@@ -18,3 +18,8 @@ protoc --java_out=src/main/java/ src/main/proto/aluno.proto
 mvn clean compile assembly:single
 
 ```
+
+## Execução do projeto
+```
+java -jar target/FILENAME.jar
+```

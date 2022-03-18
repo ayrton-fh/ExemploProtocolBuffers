@@ -3,14 +3,10 @@ package br.ufs.dcomp.ExemploProtocolBuffers;
 import java.io.*;
 import com.google.protobuf.util.JsonFormat;
 import java.util.*;
-/**
- * Hello world!
- *
- */
-public class ExemploDesserializacao 
-{
-    public static void main( String[] args ) throws Exception
-    {
+
+/*  Hello world! */
+public class ExemploDesserializacao {
+    public static void main(String[] args) throws Exception {
         // Obtendo bytes do arquivo 
         File file = new File("aluno.bin");
         FileInputStream fis = new FileInputStream(file);
@@ -32,7 +28,7 @@ public class ExemploDesserializacao
         
         // Extraindo a lista de telefones
         List<ContatoProto.Telefone> telefones = contatoAluno.getTelefonesList();
-        for (int i = 0; i<telefones.size(); i++){
+        for (int i = 0; i < telefones.size(); i++) {
             ContatoProto.Telefone fone = telefones.get(i);
             String numero = fone.getNumero();
             System.out.println(numero);
